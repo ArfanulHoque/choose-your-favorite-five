@@ -152,27 +152,36 @@
                     </div>
 
                 </div>
-                <!--Calculation-->
-                <div>
-                    <h2 class="text-5xl font-semibold">Selected-V</h2>
-                    <!-- table -->
-                    <div class="overflow-x-auto">
-                        <table class="table table-zebra w-full">
-                            <!-- head -->
-                            <thead>
-                                <tr>
-                                    <th></th>
-
-                                </tr>
-                            </thead>
-                            <tbody id="players-list">
-                                <!-- row -->
-                                <!-- <tr>
-                                    <th>1</th>
-                                    <td>name</td>
-                                </tr> -->
-                            </tbody>
-                        </table>
+                <!--Selection-->
+                <div class="grid grid-rows-2 gap-4 text-center">
+                    <div>
+                        <h2 class="text-5xl font-semibold">Selected-V</h2>
+                        <!-- table -->
+                        <div class="overflow-x-auto">
+                            <table class="table w-full px-5">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="players-list">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Calculation -->
+                    <div class="container mx-auto">
+                        <h2 class="text-5xl font-semibold">Budget</h2>
+                        <label> Per Player: </label>
+                        <input type="" name="" id="" class="mt-12">
+                        <button class="block mx-auto mt-4 bg-violet-700 rounded px-9 py-2 mb-4">Calculate</button>
+                        <h2> Player Expenses: $<span>000</span></h2>
+                        <label> Manager: </label>
+                        <input type="" name="" id="" class="mt-4">
+                        <label> Coach: </label>
+                        <input type="" name="" id="" class="mt-4">
+                        <button class="block mx-auto mt-4 bg-violet-700 rounded px-5 py-2 mb-4">Calculate Total</button>
+                        <h2> Total: $<span class="text-orange-500">000</span></h2>
                     </div>
                 </div>
             </div>
@@ -183,6 +192,7 @@
 <!-- Footer Section -->
 <footer class="footer footer-center p-4 bg-base-300 text-base-content">
     <div>
+        <hr>
         <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
     </div>
 </footer>

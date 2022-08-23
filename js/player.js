@@ -1,12 +1,11 @@
 const selectTable = [];
 
+
 function display(cardPlayer) {
-    // console.log(cardPlayer);
     const tableBody = document.getElementById('players-list');
     tableBody.innerHTML = '';
 
     for (let i = 0; i < cardPlayer.length; i++) {
-        // console.log(selectTable[i].playerName);
         const name = selectTable[i].playerName;
 
         const tr = document.createElement('tr');
@@ -14,25 +13,38 @@ function display(cardPlayer) {
         <th>${i + 1}</th>
         <td>${name}</td>
         `;
-        tableBody.appendChild(tr);
 
+        if (cardPlayer.length > 5) {
+            alert('You are already selected 5 players')
+
+        }
+        else {
+            tableBody.appendChild(tr);
+
+        }
     }
 }
 
 function addToCart(element) {
-    // console.log(element.parentNode.parentNode.children);
-    // console.log(element.parentNode.parentNode.children[0].innerText);
+
 
     const playerName = element.parentNode.parentNode.children[0].innerText
-    // console.log(playerName);
-
     const playerSelect = {
         playerName: playerName
     }
+
     selectTable.push(playerSelect)
-
-    // console.log(selectTable);
-    // console.log(selectTable.length);
-
     display(selectTable);
 }
+
+document.getElementById('btn-calculate').addEventListener('click', function () {
+    const perPlayerField = document.getElementById('per-player-field');
+    const newPerPlayerAmountString = perPlayerField.value;
+    const newPerPlayerAmount = parseFloat(newPerPlayerAmountString);
+
+    perPlayerField.value = '';
+
+
+
+
+})

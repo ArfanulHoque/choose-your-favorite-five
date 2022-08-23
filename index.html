@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Choose Your Favorit Players</title>
     <link rel="stylesheet" href="styles/style.css">
     <!-- tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,11 +13,11 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body class="bg-black">
     <header>
         <section class="text-white text-center">
             <div class="w-full bg-top bg-cover bg-center p-12"
-                style="background-image: url('images/banner/bannerA5.jpg')">
+                style="background-image: url('images/banner/banner5.jpg')">
                 <h1 class="text-5xl font-bold">Choose Your Favorit Players</h1>
                 <h5 class="text-1xl">Let's be clear, though, about those words "right now." This list takes into account
                     the players'
@@ -157,8 +157,8 @@
                     <div>
                         <h2 class="text-5xl font-semibold">Selected-V</h2>
                         <!-- table -->
-                        <div class="overflow-x-auto">
-                            <table class="table w-full px-5">
+                        <div class="overflow-x-auto mt-10">
+                            <table class=" w-full px-5">
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -173,11 +173,12 @@
                     <div class="container mx-auto">
                         <h2 class="text-5xl font-semibold">Budget</h2>
                         <label> Per Player: </label>
-                        <input type="" name="" id="" class="mt-12">
-                        <button class="block mx-auto mt-4 bg-violet-700 rounded px-9 py-2 mb-4">Calculate</button>
+                        <input id="per-player-field" type="" name="" class="mt-12">
+                        <button id="btn-calculate"
+                            class="block mx-auto mt-4 bg-violet-700 rounded px-9 py-2 mb-4">Calculate</button>
                         <h2> Player Expenses: $<span>000</span></h2>
                         <label> Manager: </label>
-                        <input type="" name="" id="" class="mt-4">
+                        <input type="" name="" id="" class="mt-4"> <br>
                         <label> Coach: </label>
                         <input type="" name="" id="" class="mt-4">
                         <button class="block mx-auto mt-4 bg-violet-700 rounded px-5 py-2 mb-4">Calculate Total</button>

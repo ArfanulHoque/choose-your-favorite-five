@@ -2,6 +2,7 @@
 const selectTable = [];
 
 function display(cardPlayer) {
+    // alert
     if (cardPlayer.length > 5) {
         alert('Already selected five')
         return;
@@ -19,7 +20,6 @@ function display(cardPlayer) {
         `;
         tableBody.appendChild(tr);
     }
-
 }
 function arrLentgh() {
     const playeradd = selectTable.length;
@@ -67,7 +67,7 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
 })
 
 
-// Manager and Coach Expenses
+// manager , coach and total 
 document.getElementById('btn-total-calculate').addEventListener('click', function () {
     const managerExpenses = getInputFieldByID('manager-field');
     const coachExpenses = getInputFieldByID('coach-field');

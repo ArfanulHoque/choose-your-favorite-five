@@ -39,6 +39,10 @@ function getInputFieldByID(inputId) {
 }
 
 function addToCart(element) {
+    const btnDisables = document.getElementsByClassName('btn-primary');
+    for (const btnDisable of btnDisables) {
+        element.setAttribute('disabled', true)
+    }
 
     const playerName = element.parentNode.parentNode.children[0].innerText
     const playerSelect = {
@@ -56,6 +60,8 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
     const inputField = getInputFieldByID('per-player-field')
     const playeSelect = arrLentgh();
     const totalPlayerExpenses = inputField * playeSelect;
+    console.log(totalPlayerExpenses);
+    if (isNaN(totalPlayerExpenses)) { return; }
     const setValue = document.getElementById('player-expenses');
     setValue.innerText = totalPlayerExpenses
 })
@@ -66,9 +72,15 @@ document.getElementById('btn-total-calculate').addEventListener('click', functio
     const managerExpenses = getInputFieldByID('manager-field');
     const coachExpenses = getInputFieldByID('coach-field');
     const totalPlayerExpenses = document.getElementById('player-expenses');
+    const totalPlayerExpensesString = totalPlayerExpenses.innerText;
+    const totalPlayerCost = parseFloat(totalPlayerExpensesString);
 
+    const total = managerExpenses + coachExpenses + totalPlayerCost;
+    document.getElementById('total').innerText = total;
 
 })
+
+
 
 
 
